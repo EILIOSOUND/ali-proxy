@@ -4,7 +4,6 @@ const axios = require("axios");
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Remplace par tes vraies clés si besoin
 const APP_KEY = "518144";
 const APP_SECRET = "COmmaWfjMfaLC2ZftkgkQuuSH2GX9ftb";
 
@@ -24,7 +23,7 @@ app.get("/get", async (req, res) => {
 
   const params = {
     app_key: APP_KEY,
-    method: "aliexpress.affiliate.product.detail.get",
+    method: "aliexpress.affiliate.product.query",
     sign_method: "md5",
     timestamp: new Date().toISOString().slice(0, 19),
     format: "json",
